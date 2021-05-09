@@ -1,9 +1,8 @@
 
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
+  <% if flash[:fail] %>
+    <div class="fail"><%= flash[:fail] %></div>
+  <% end %>
   <p>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
