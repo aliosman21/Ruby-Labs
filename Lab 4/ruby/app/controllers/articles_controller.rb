@@ -62,6 +62,7 @@ class ArticlesController < ApplicationController
     rescue
       render :json => { "Message ": "Authentication error" }
     end
+    puts decoded_token
     return true      
   end 
 
