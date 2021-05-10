@@ -1,0 +1,13 @@
+
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+  <% if flash[:fail] %>
+    <div class="fail"><%= flash[:fail] %></div>
+  <% end %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
