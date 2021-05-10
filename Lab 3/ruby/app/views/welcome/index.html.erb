@@ -1,9 +1,0 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
-<%= link_to 'New article', new_article_path %>
-<%unless current_user.blank? -%>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<%else -%>
-<%= link_to('Login', new_user_session_path) %>  
-<%= link_to('Register', new_user_registration_path) %>
-<%end-%>
